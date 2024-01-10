@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie </title>
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    <title>Search Film</title>
 </head>
 <body>
 <header>
     <h1>MOVIE</h1>
-  <nav class="navbar">
-    <ul class="menu">
-      <li><a href="index.html">Beranda</a></li>
-      <li class="submenu">
-        <a href="">Pilih</a> 
-        <ul class="dropdown">
-          <li><a href="laman2.html">Upcoming</a></li>
-          <li><a href="laman1.html">M.food</a></li>
-        </ul>
-      </li>  
-      <li><a href="laman3.html">Kontak</a></li>
-    </ul>
+            <nav class="navbar">
+                <ul class="menu">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li class="submenu">
+                    <a href="">Tiket</a> 
+                    <ul class="dropdown">
+                      <li><a href="laman2.html">Upcoming</a></li>
+                      <li><a href="laman1.html">M.food</a></li>
+                    </ul>
+                  </li>  
+                  <li><a href="laman3.html">Kontak</a></li>
+                </ul>
+        </div>
+        <div class="">
+            <div class="search-container">
+            <div class="search-box">
+            <input type="text" name="" id="find" placeholder="Cari Film...." onkeyup="search()">
+            </div>
+    </div>
     <div class="menu-toggle">
         <input type="checkbox" />
         <span></span>
@@ -37,10 +47,13 @@
             background-color: #121212;
             color: #ffffff;
         }
+        .navbar {
+         background-color: #3a3a3a;
+         }
 
         header {
             text-align: center;
-            padding: 20px;
+            padding: 70px;
             background-color: #1c1c1c;
         }
 
@@ -191,10 +204,27 @@
         </center> 
         </div>
     </section>
-
     <footer>
         <p>&copy;Movie.</p>
     </footer>
-
+     <!-- javascript -->
+<script type="text/javascript">
+    function search() {
+    let filter = document.getElementById('find').value.toUpperCase();
+    let item = document.querySelectorAll('.movie-card');
+    let l = document.getElementsByTagName('h2');
+    for(var i = 0;i<=l.length;i++){
+    let a=item[i].getElementsByTagName('h2')[0];
+    let value=a.innerHTML || a.innerText || a.textContent;
+    if(value.toUpperCase().indexOf(filter) > -1) {
+    item[i].style.display="";
+    }
+    else
+    {
+    item[i].style.display="none";
+    }
+    }
+    }
+    </script>
 </body>
 </html>

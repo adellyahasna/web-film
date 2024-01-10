@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+body{
+  background: white;
+  color: black;
+}
+
+.menu, .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  position: relative;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f2f5;
+  border: 1px solid black;
+  font-family: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+header {
+background-color: rgb(80, 88, 232);
+color: white;
+text-align: center;
+padding: 0;
+margin: 0;
+}
+
+nav ul {
+list-style: none;
+padding: 0;
+display: flex;
+list-style-type: none; /* Menghilangkan marker default dari daftar */
+text-align: left; /* Mengatur teks daftar rata kiri */
+
+}
+
+nav li {
+position: relative;
+list-style-type: none; /* Menghilangkan marker default dari daftar */
+text-align: left; /* Mengatur teks daftar rata kiri */
+}
+
+nav a {
+text-decoration: none;
+color: #fff;
+padding: 15px 20px;
+display: block;
+}
+
+.dropdown-content {
+
+display: none;
+position: absolute;
+background-color: rgb(89, 125, 197);
+min-width: 200px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content li {
+padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.menu {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-wrap: wrap;
+padding: 2rem;
+}
+
+.menu-item {
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 1rem;
+margin: 1rem;
+width: 300px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+width: 100%;
+max-height: 200px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.container {
+width:75%;
+margin:0 auto;
+}
+.container:after {
+content:'';
+display: block;
+clear: both;
+}
