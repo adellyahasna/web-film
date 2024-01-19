@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      color: #f9ab00;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .movie {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .movie span {
+      margin-bottom: 5px;
+    }
+
+    .cart {
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #10359c;
+      color: #e9ac03;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #checkoutBtn {
+      background-color: #177a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tiket Booking</h1>
+  </header>
+
+  <div class="movie" id="movie1">
+    <span>Night Swim</span>
+    <span>Date: <input type="date" id="date1"></span>
+    <span>Time: <input type="time" id="time1"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity1" value="0" min="0"></span>
+    <button onclick="addToCart('Night Swim', 35, 'quantity1', 'date1', 'time1')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie2">
+    <span>The Bricklayer</span>
+    <span>Date: <input type="date" id="date2"></span>
+    <span>Time: <input type="time" id="time2"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity2" value="0" min="0"></span>
+    <button onclick="addToCart('The Bricklayer', 35, 'quantity2', 'date2', 'time2')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie3">
+    <span>Mean Girls</span>
+    <span>Date: <input type="date" id="date3"></span>
+    <span>Time: <input type="time" id="time3"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity3" value="0" min="0"></span>
+    <button onclick="addToCart('Mean Girls', 35, 'quantity3', 'date3', 'time3')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie4">
+    <span>Miller's Girl</span>
+    <span>Date: <input type="date" id="date4"></span>
+    <span>Time: <input type="time" id="time4"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity4" value="0" min="0"></span>
+    <button onclick="addToCart('Millers Girl', 35, 'quantity4', 'date4', 'time4')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie5">
+    <span>13 Bom di Jakarta</span>
+    <span>Date: <input type="date" id="date5"></span>
+    <span>Time: <input type="time" id="time5"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity5" value="0" min="0"></span>
+    <button onclick="addToCart('13 Bom di Jakarta', 35, 'quantity5', 'date5', 'time5')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie6">
+    <span>Trinil: Kembalikan Tubuhku</span>
+    <span>Date: <input type="date" id="date6"></span>
+    <span>Time: <input type="time" id="time6"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity6" value="0" min="0"></span>
+    <button onclick="addToCart('Trinil: Kembalikan Tubuhku', 35, 'quantity6', 'date6', 'time6')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie7">
+    <span>Ancika: Dia yang Bersamaku 1995</span>
+    <span>Date: <input type="date" id="date7"></span>
+    <span>Time: <input type="time" id="time7"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity7" value="0" min="0"></span>
+    <button onclick="addToCart('Ancika: Dia yang Bersamaku 1995', 35, 'quantity7', 'date7', 'time7')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie8">
+    <span>Rambut Kafan</span>
+    <span>Date: <input type="date" id="date8"></span>
+    <span>Time: <input type="time" id="time8"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity8" value="0" min="0"></span>
+    <button onclick="addToCart('Rambut Kafan', 35, 'quantity8', 'date8', 'time8')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie9">
+    <span>Kereta Berdarah</span>
+    <span>Date: <input type="date" id="date9"></span>
+    <span>Time: <input type="time" id="time9"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity9" value="0" min="0"></span>
+    <button onclick="addToCart('Kereta Berdarah', 35, 'quantity9', 'date9', 'time9')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie10">
+    <span>Sometimes I Think About Dying</span>
+    <span>Date: <input type="date" id="date10"></span>
+    <span>Time: <input type="time" id="time10"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity10" value="0" min="0"></span>
+    <button onclick="addToCart('Sometimes I Think About Dying', 35, 'quantity10', 'date10', 'time10')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie11">
+    <span>Which Brings Me to You</span>
+    <span>Date: <input type="date" id="date11"></span>
+    <span>Time: <input type="time" id="time11"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity11" value="0" min="0"></span>
+    <button onclick="addToCart('Which Brings Me to You', 35, 'quantity11', 'date11', 'time11')">Beli Tiket</button>
+  </div>
+
+  <div class="movie" id="movie12">
+    <span>I.S.S.</span>
+    <span>Date: <input type="date" id="date12"></span>
+    <span>Time: <input type="time" id="time12"></span>
+    <span>Price: Rp.35000</span>
+    <span>Tiket: <input type="number" id="quantity12" value="0" min="0"></span>
+    <button onclick="addToCart('I.S.S.', 12, 'quantity12', 'date12', 'time12')">Beli Tiket</button>
+  </div>
+
+  </div>
+
+  <div class="cart">
+    <h2>Detail Transaksi</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+  </div>
+
+  <script>
+    let cart = [];
+
+    function addToCart(movie, price, quantityId, dateId, timeId) {
+      const quantity = document.getElementById(quantityId).value;
+      const date = document.getElementById(dateId).value;
+      const time = document.getElementById(timeId).value;
+      
+      if (quantity > 0 && date && time) {
+        cart.push({ movie, price, quantity: parseInt(quantity), date, time });
+        updateCart();
+      }
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      const totalElement = document.getElementById('total');
+      let total = 0;
+
+      cartItems.innerHTML = '';
+
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.movie} - $${item.price} x ${item.quantity} (${item.date} at ${item.time})`;
+        cartItems.appendChild(li);
+        total += item.price * item.quantity;
+      });
+
+      totalElement.textContent = total;
+    }
+
+    function checkout() {
+      alert('Checkout Successful!\nTotal Amount: $' + document.getElementById('total').textContent);
+      cart = [];
+      updateCart();
+    }
+  </script>
+  <center>
+    <a href="index.html"><button class="custom-button">Beranda</button></a>  
+   </center>
+</body>
+</html>
